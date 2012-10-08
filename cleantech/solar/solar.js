@@ -31,7 +31,7 @@ d3.json("../us-states.json", function(json) {
 });
 
 
-d3.csv("./solar2010.csv", function(csv) {
+d3.csv("./solar2000.csv", function(csv) {
   jones.selectAll("circle").data(csv).enter()
     .append("circle")
     .attr("cx", lon)
