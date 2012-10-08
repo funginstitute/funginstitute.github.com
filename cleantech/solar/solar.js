@@ -15,9 +15,6 @@ var states = svg.append("g")
 var jones = svg.append("g")
     .attr("id", "jones");
 
-var kim = svg.append("g")
-    .attr("id", "kim");
-
 d3.json("../us-counties.json", function(json) {
   counties.selectAll("path")
       .data(json.features)
@@ -33,14 +30,6 @@ d3.json("../us-states.json", function(json) {
       .attr("d", path);
 });
 
-/*
-d3.json("unemployment.json", function(json) {
-  data = json;
-  counties.selectAll("path")
-      .attr("class", quantize);
-});
-*/
-
 
 d3.csv("./solar2010.csv", function(csv) {
   jones.selectAll("circle").data(csv).enter()
@@ -50,18 +39,6 @@ d3.csv("./solar2010.csv", function(csv) {
     .attr("r", 3)
     .attr("fill", "red")
     .attr("class", "jones");
-});
-
-
-
-d3.csv("./solar1980.csv", function(csv) {
-  kim.selectAll("circle").data(csv).enter()
-    .append("circle")
-    .attr("cx", lon)
-    .attr("cy", lat)
-    .attr("r", 3)
-    .attr("fill", "green")
-    .attr("class", "kim");
 });
 
 
