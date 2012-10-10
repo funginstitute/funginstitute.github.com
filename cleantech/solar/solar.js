@@ -31,14 +31,6 @@ d3.json("../us-states.json", function(json) {
 });
 
 
-d3.json("fivecounties.json", function(json) {
-  data = json;
-  counties.selectAll("path")
-      .attr("class", quantize);
-});
-
-
-
 d3.json("solar.json", function(json) {
   data = json;
   counties.selectAll("path")
@@ -54,7 +46,7 @@ d3.select("select").on("change", function() {
 });
 
 
-
+/*
 d3.csv("./solar2000.csv", function(csv) {
   jones.selectAll("circle").data(csv).enter()
     .append("circle")
@@ -78,7 +70,7 @@ function lon(d) {
   var latval = y([d.Lon, d.Lat]);
   return latval[0];
 }
-
+*/
 
 function quantize(d) {
   return "q" + Math.min(8, ~~(data[d.id] * 9 / 12)) + "-9";
