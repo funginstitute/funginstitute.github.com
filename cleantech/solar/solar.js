@@ -7,7 +7,7 @@ var svg = d3.select("#chart")
 
 var counties = svg.append("g")
     .attr("id", "counties")
-    .attr("class", "Greys");
+    .attr("class", "Blues");
 
 var states = svg.append("g")
     .attr("id", "states");
@@ -29,6 +29,30 @@ d3.json("../us-states.json", function(json) {
     .enter().append("path")
       .attr("d", path);
 });
+
+
+d3.json("fivecounties.json", function(json) {
+  data = json;
+  counties.selectAll("path")
+      .attr("class", quantize);
+});
+
+
+
+d3.json("solar.json", function(json) {
+  data = json;
+  counties.selectAll("path")
+      .attr("class", quantize);
+});
+
+
+d3.select("select").on("change", function() {
+  //d3.selectAll("svg").attr("class", this.value);
+  //d3.selectAll("#counties").attr("class", this.value);
+  console.log("In the select handler...");
+  d3.select("#counties").attr("class", this.value);
+});
+
 
 
 d3.csv("./solar2000.csv", function(csv) {
@@ -54,6 +78,7 @@ function lon(d) {
   var latval = y([d.Lon, d.Lat]);
   return latval[0];
 }
+
 
 function quantize(d) {
   return "q" + Math.min(8, ~~(data[d.id] * 9 / 12)) + "-9";
