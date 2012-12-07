@@ -31,7 +31,7 @@ d3.json("../us-states.json", function(json) {
 });
 
 
-d3.json("wind.json", function(json) {
+d3.json("biofuel.json", function(json) {
   data = json;
   counties.selectAll("path")
       .attr("class", quantize);
