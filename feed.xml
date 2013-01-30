@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/</id>
+  <link href="http://blog.url.com/"/>
+  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <updated>2013-01-30T23:44:00Z</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>Fung Lab web pages</title>
+    <link rel="alternate" href="/2013/01/30/fung-lab-web-pages.html"/>
+    <id>/2013/01/30/fung-lab-web-pages.html</id>
+    <published>2013-01-30T23:44:00Z</published>
+    <updated>2013-01-30T23:44:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <summary type="html"></summary>
+    <content type="html"></content>
+  </entry>
+</feed>
