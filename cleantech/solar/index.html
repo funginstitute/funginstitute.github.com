@@ -1,49 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <title>Choropleth example</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta charset='utf-8' />
     <meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible' />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
-    <script src="http://d3js.org/d3.v2.js"></script>
-    <link type="text/css" media="screen" rel="stylesheet" href="/cleantech/solar/choropleth.css" />
-    <link type="text/css" rel="stylesheet" href="/cleantech/solar/colorbrewer/colorbrewer.css"/>
+    <link href="../../stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body>
-
-    <div id="chart"></div>
-    <div id="footer">
-
-      1546 patents related to wind energy production, granted between 1981 and 2010,
-      arranged by the county of inventor residence.
-
-
-      <div class="hint">Use the menu to change the color scale</div>
-      <div><select>
-        <optgroup label="Colors by Cynthia Brewer.">
-          <option value="YlGn">YlGn</option>
-          <option value="YlGnBu">YlGnBu</option>
-          <option value="GnBu">GnBu</option>
-          <option value="BuGn">BuGn</option>
-          <option value="PuBuGn">PuBuGn</option>
-          <option value="PuBu">PuBu</option>
-          <option value="BuPu">BuPu</option>
-          <option value="RdPu">RdPu</option>
-          <option value="PuRd">PuRd</option>
-          <option value="OrRd">OrRd</option>
-          <option value="YlOrRd">YlOrRd</option>
-          <option value="YlOrBr">YlOrBr</option>
-          <option value="Purples">Purples</option>
-          <option value="Blues" selected>Blues</option>
-          <option value="Greens">Greens</option>
-          <option value="Oranges">Oranges</option>
-          <option value="Reds">Reds</option>
-          <option value="Greys">Greys</option>
-        </optgroup>
-      </select></div>
+    <div class='container'>
+      <div class='row'>
+        <div class='span12'>
+          <div class='navbar'>
+            <div class='navbar-inner'>
+              <div class='container'>
+                <ul class='nav'>
+                  <li>
+                    <a href='/'>Research Home</a>
+                  </li>
+                  <li>
+                    <a href='http://funginstitute.berkeley.edu/'>Fung @ Berkeley</a>
+                  </li>
+                  <li>
+                    <a href='https://github.com/funginstitute'>Fung @ Github</a>
+                  </li>
+                  <li>
+                    <a href='/statistics'>Patent statistics</a>
+                  </li>
+                  <li>
+                    <a href='/cleantech/solar/'>Solar by state</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='span12'>
+          <div id='main' role='main'>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+            <html>
+              <head>
+                <title>Choropleth example</title>
+                <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
+                  <meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible' />
+                  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'></script>
+                  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js'></script>
+                  <script src='http://d3js.org/d3.v2.js'></script>
+                  <link href='/cleantech/solar/choropleth.css' media='screen' rel='stylesheet' type='text/css' />
+                  <link href='/cleantech/solar/colorbrewer/colorbrewer.css' rel='stylesheet' type='text/css' />
+                </meta>
+              </head>
+              <body>
+                <div id='chart'></div>
+                <div id='footer'>
+                  1546 patents related to wind energy production, granted between 1981 and 2010,
+                  arranged by the county of inventor residence.
+                  <div class='hint'>Use the menu to change the color scale</div>
+                  <div>
+                    <select>
+                      <optgroup label='Colors by Cynthia Brewer.'>
+                        <option value='YlGn'>YlGn</option>
+                        <option value='YlGnBu'>YlGnBu</option>
+                        <option value='GnBu'>GnBu</option>
+                        <option value='BuGn'>BuGn</option>
+                        <option value='PuBuGn'>PuBuGn</option>
+                        <option value='PuBu'>PuBu</option>
+                        <option value='BuPu'>BuPu</option>
+                        <option value='RdPu'>RdPu</option>
+                        <option value='PuRd'>PuRd</option>
+                        <option value='OrRd'>OrRd</option>
+                        <option value='YlOrRd'>YlOrRd</option>
+                        <option value='YlOrBr'>YlOrBr</option>
+                        <option value='Purples'>Purples</option>
+                        <option selected='' value='Blues'>Blues</option>
+                        <option value='Greens'>Greens</option>
+                        <option value='Oranges'>Oranges</option>
+                        <option value='Reds'>Reds</option>
+                        <option value='Greys'>Greys</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                </div>
+                <script src='/cleantech/solar/solar.js' type='text/javascript'></script>
+              </body>
+            </html>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <script type="text/javascript" src="/cleantech/solar/solar.js"></script>
   </body>
 </html>
