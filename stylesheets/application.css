@@ -5717,3 +5717,30 @@ a.label:hover, a.badge:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+/* http://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap */
+/*
+TODO: Go back over SO page and implement.
+*/
+/* line 12, application.css.scss */
+html, body {
+  height: 100%; }
+
+/* line 17, application.css.scss */
+.main-content {
+  min-height: 100%; }
+
+/* See SO page above. */
+/*
+#wrap {
+  min-height: 100%;
+}
+*/
+/* line 29, application.css.scss */
+footer {
+  /*position: relative;*/
+  background-color: #eee;
+  margin-top: -50px;
+  height: 50px;
+  clear: both;
+  padding-top: 20px; }
