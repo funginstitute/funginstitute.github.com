@@ -20,20 +20,18 @@ var yAxis = d3.svg.axis()
     .tickFormat(formatPercent);
 
 var svg = d3.select("#chart").append("svg")
-/*
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-*/
 
-d3.tsv("/statistics/d3barchartdata.tsv", function(error, data) {
+d3.csv("/statistics/patent_full.csv", function(error, data) {
 
   data.forEach(function(d) {
     d.frequency = +d.frequency;
   });
 
-  x.domain(data.map(function(d) { return d.letter; }));
+  x.domain(data.map(function(d) { return d.info; }));
   y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
 
   svg.append("g")
@@ -55,7 +53,7 @@ d3.tsv("/statistics/d3barchartdata.tsv", function(error, data) {
       .data(data)
     .enter().append("rect")
       .attr("class", "bar")
-      .attr("x", function(d) { return x(d.letter); })
+      .attr("x", function(d) { return x(d.info); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.frequency); })
       .attr("height", function(d) { return height - y(d.frequency); });
