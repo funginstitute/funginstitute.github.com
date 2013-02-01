@@ -42,15 +42,34 @@
       <div class='row'>
         <div class='span12'>
           <div id='main' role='main'>
+            <style type='text/css'>
+              /*<![CDATA[*/
+                svg {
+                  background-color: #fff;
+                }
+                .axis path,
+                .axis line {
+                  fill: none;
+                  stroke: #000;
+                  shape-rendering: crispEdges;
+                }
+                .bar {
+                  fill: steelblue;
+                }
+                .x.axis path {  display: none;}
+              /*]]>*/
+            </style>
             <h1>
               Patent database statistics
             </h1>
-            <p>
-              Stay tuned for statistical visualization of the US patent database.
-            </p>
             <div>
               <h2 id='bar_chart_goes_here'>Bar chart goes here.</h2>
             </div>
+            <p>
+              Stay tuned for statistical visualization of the US patent database.
+            </p>
+            <div id='chart'></div>
+            <script src='/statistics/barchart.js' type='text/javascript'></script>
           </div>
         </div>
       </div>
